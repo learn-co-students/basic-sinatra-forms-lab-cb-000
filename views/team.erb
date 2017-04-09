@@ -5,10 +5,19 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
+ <h1><%= "Your team called #{@name} is now a thing!" %></h1>
+ <h2>Here's all the info: </h2>
+
+ <% @team.each do |k, v|%>
+   <p><h3><%= "#{k}: #{v}" %></h3></p>
+ <% end %>
 
 
  </body>
+
+<style type="text/css">
+  h1, h2, p {
+    text-align: center;
+  }
+</style>
 </html>
-
-

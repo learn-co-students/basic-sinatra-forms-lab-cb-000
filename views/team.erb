@@ -5,10 +5,11 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
+   <h1>Team Name: <%= @team_name %></h1>
 
-
+ <% @team_info.each do |role, name| %>
+    <!-- role = role.split('_').map(&:capitalize).join(' ') -->
+  <h2><%= "#{capitalize_words(role.to_s)}: #{name.capitalize}"%></h2>
+ <% end %>
  </body>
 </html>
-
-

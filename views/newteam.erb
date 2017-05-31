@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="UTF-8">
-  <title>Basketball Team Signup</title>
- </head>
- <body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Basketball Team Signup</title>
+    <link rel = 'stylesheet' href = 'stylesheet/new_team_style.css' type = 'text/css'>
+  </head>
+  <body>
 
-
- </body>
+    <div class = 'form-box'>
+      <h1>Create a Basketball Team!</h1>
+      <form action = '/team' method = 'POST'>
+	<label for = 'name'>Team name:</label>
+	<input type = 'text' id = 'name' name = 'name'><br><br>
+	
+	<label for = 'coach'>coach:</label>
+	<input type = 'text' id = 'coach' name = 'coach'><br><br>
+	
+	<label for = 'pg'>Point Guard:</label>
+	<input type = 'text' id = 'pg' name = 'pg'><br><br>
+	
+	<label for = 'sg'>Shooting Guard:</label>
+	<input type = 'text' id = 'sg' name = 'sg'><br><br>
+	
+	<label for = 'sf'>Small Forward</label>
+	<input type = 'text' id = 'sf' name = 'sf'><br><br>
+	
+	<label for = 'pf'>Power Forward</label>
+	<input type = 'text' id = 'pf' name = 'pf'><br><br>
+	
+	<label for = 'c'>Center</label>
+	<input type = 'text' id = 'c' name = 'c'><br><br>
+	
+	<input type = 'submit' id = "submit">
+      </form>
+    </div>
+    
+  </body>
 </html>
 
 

@@ -5,10 +5,9 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
-
+   <h1><%= format_label(TEAM_NAME) %>: <%= @params[TEAM_NAME] %></h1>
+   <% MEMBERS.each {|member| %>
+     <h2><%= format_label(member) %>: <%= @params[member] %></h2>
+   <% } %>
  </body>
 </html>
-
-

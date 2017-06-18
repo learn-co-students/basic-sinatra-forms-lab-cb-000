@@ -5,9 +5,16 @@
   <title>Basketball Team Signup</title>
  </head>
  <body>
+   <h1>Create a Basketball Team!</h1>
 
+   <form method="POST" action="<%= TEAM_ACTION %>">
+     <p><%= format_label(TEAM_NAME) %>: <input type="text" name="<%= TEAM_NAME.to_s %>"></p>
+     <% MEMBERS.each {|member| %>
+       <p><%= format_label(member) %>: <input type="text" name="<%= member.to_s %>"></p>
+     <% } %>
+     <br>
+     <input type="submit" value="Submit"/>
+   </form>
 
  </body>
 </html>
-
-

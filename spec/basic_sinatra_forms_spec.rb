@@ -6,24 +6,24 @@ describe App do
       expect(last_response.status).to eq(200)
     end
 
-    it 'renders basketball team form' do 
+    it 'renders basketball team form' do
       visit '/newteam'
       expect(page).to have_selector("form")
-      expect(page).to have_field(:name)
-      expect(page).to have_field(:coach)
-      expect(page).to have_field(:pg)
-      expect(page).to have_field(:sg)
-      expect(page).to have_field(:sf)
-      expect(page).to have_field(:pf)
-      expect(page).to have_field(:c)
+      expect(page).to have_field(:team_name)
+      expect(page).to have_field(:coach_name)
+      expect(page).to have_field(:point_guard)
+      expect(page).to have_field(:shooting_guard)
+      expect(page).to have_field(:small_forward)
+      expect(page).to have_field(:power_forward)
+      expect(page).to have_field(:center)
     end
   end
 
   describe 'POST /team' do
-    it "displays the basketball team name in the browser" do 
+    it "displays the basketball team name in the browser" do
       visit '/newteam'
 
-      fill_in(:name, :with => "Bballers")
+      fill_in(:team_name, :with => "Bballers")
       click_button "submit"
       expect(page).to have_text("Team Name: Bballers")
     end
@@ -31,7 +31,7 @@ describe App do
     it "displays the coach's name in the browser" do
       visit '/newteam'
 
-      fill_in(:coach, :with => "Walter")
+      fill_in(:coach_name, :with => "Walter")
       click_button "submit"
 
       expect(page).to have_text("Coach: Walter")
@@ -40,7 +40,7 @@ describe App do
     it "displays the point guard's name in the browser" do
       visit '/newteam'
 
-      fill_in(:pg, :with => "Jeff")
+      fill_in(:point_guard, :with => "Jeff")
       click_button "submit"
 
       expect(page).to have_text("Point Guard: Jeff")
@@ -49,7 +49,7 @@ describe App do
     it "displays the shooting guard's name in the browser" do
       visit '/newteam'
 
-      fill_in(:sg, :with => "Ralph")
+      fill_in(:shooting_guard, :with => "Ralph")
       click_button "submit"
 
       expect(page).to have_text("Shooting Guard: Ralph")
@@ -58,25 +58,25 @@ describe App do
     it "displays the power forward's name in the browser" do
       visit '/newteam'
 
-      fill_in(:pf, :with => "Danny")
+      fill_in(:power_forward, :with => "Danny")
       click_button "submit"
 
       expect(page).to have_text("Power Forward: Danny")
     end
 
-    it "displays the shooting gaurd's name in the browser" do
+    it "displays the small gaurd's name in the browser" do
       visit '/newteam'
 
-      fill_in(:sg, :with => "Joe")
+      fill_in(:small_forward, :with => "Joe")
       click_button "submit"
 
-      expect(page).to have_text("Shooting Guard: Joe")
+      expect(page).to have_text("Small Forward: Joe")
     end
 
     it "displays the center's name in the browser" do
       visit '/newteam'
 
-      fill_in(:c, :with => "Avi")
+      fill_in(:center, :with => "Avi")
       click_button "submit"
 
       expect(page).to have_text("Center: Avi")

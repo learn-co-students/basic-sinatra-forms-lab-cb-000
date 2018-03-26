@@ -6,35 +6,36 @@
   </head>
   <body>
 
-  <form action="/team">
+  <form action="/team" method="POST">
       <label for="name">name</label> 
-      <input type='text' id='name'/>
+      <input type='text' name='name'/>
       <br/>
 
-      <label for="coach">coach</label> 
-      <input type='text' id='coach'/>
+      <label for="coach">Coach</label> 
+      <input type='text' name='coach'/>
       <br/>
 
       <label for="Point Guard">Point Guard</label> 
-      <input type='text' id='pg'/>
+      <input type='text' name='pg'/>
       <br/>
 
       <label for="Shooting Guard">Shooting Guard</label> 
-      <input type='text' id='sg'/>
+      <input type='text' name='sg'/>
       <br/>
 
       <label for="Point Forward">Point Forward</label> 
-      <input type='text' id='pf'/>
+      <input type='text' name='pf'/>
       <br/>
 
       <label for="Small Forward">Small Forward</label> 
-      <input type='text' id='sf'/>
+      <input type='text' name='sf'/>
       <br/>
 
       <label for="Center">Center</label> 
-      <input type='text' id='c'/>
+      <input type='text' name='c'/>
       <br/>
-      <input type='submit' id='submit' title='submit'/>
+      <input type='submit' id='submit' name='submit' title='submit' value='submit'/>
+      <input type='Submit' id='Submit' name='Submit' title='Submit' value='Submit'/>
   </form>
  </body>
 </html>

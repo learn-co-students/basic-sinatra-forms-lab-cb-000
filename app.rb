@@ -13,6 +13,13 @@ class App < Sinatra::Base
   # Have the form send a POST request to this route.
   # Upon submission, pass the submitted data to the team.erb template.
   post '/team' do
+    @name = params[:name]
+    @coach = params[:coach]
+    @pg = params[:pg]
+    @sg = params[:sg]
+    @pf = params[:pf]
+    @sf = params[:sf]
+    @c = params[:c]
     erb :team
   end
 
